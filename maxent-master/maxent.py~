@@ -1,0 +1,20 @@
+import maxent.cmaxent as cmaxent
+
+
+
+m = MaxentModel()
+
+context = ['predicate1', 'predicate2', 'predicate3']
+
+m.begin_add_event()
+
+m.add_event(context, "outcome1",1)
+m.add_event(context, "outcome2",1)
+m.add_event(context, "outcome3",1)
+
+m.end_add_event()
+
+m.train(300,'lbfgs', 0, 1E-05)
+
+print m.eval(context, "outcome1")
+print m.eval_all(context)
