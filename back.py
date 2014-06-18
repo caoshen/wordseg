@@ -20,9 +20,12 @@ def back(test, back):
             words +=word
             backfile.append(words)
             words = ''
+    if words != '':
+	backfile.append(words)	
+	
     f.close
 
-    f = codecs.open(back,'w','utf-8')
+    f = codecs.open(back,'a','utf-8')
     f.write(' '.join(backfile))
     f.close
         
