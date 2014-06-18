@@ -1,9 +1,8 @@
-###cn_seg: chinese segment
+#WordSeg
 
-links:
+Chinese Word Segmentation using [CRF++][link1].
 
-+ http://crfpp.googlecode.com/svn/trunk/doc/index.html
+[link1]:http://sourceforge.net/projects/crfpp/files/
 
 + https://github.com/isnowfy/snowseg/blob/master/unigram_add_one.py
 
-+ https://github.com/minixalpha/PyCWS
