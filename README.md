@@ -2,7 +2,7 @@
 
 Chinese Word Segmentation using [CRF++][link1].
 
-[link1]:http://sourceforge.net/projects/crfpp/files/
+[link1]:http://crfpp.googlecode.com/svn/trunk/doc/index.html
 
 [link2]:https://github.com/isnowfy/snowseg/blob/master/unigram_add_one.py
 
