@@ -3,13 +3,19 @@
 import codecs
 import sys
 
-def tag(training, tagfile):
-    f = codecs.open(training, 'r', 'utf-8')
+def tag(origin, tagfile):
+    f = codecs.open(origin, 'r', 'utf-8')
     contents = f.read()
     contents = contents.replace(u'\r',u'')
-    contents = contents.replace(u'\n',u'')
+    contents = contents.replace(u'\n',u'\n ')
 
-    words = contents.split(' ')
+    # if origin is a training file, then split the word
+    # by space. If origin is a test file, transform it into
+    # a list
+    if origin.find('train') != -1:
+        words = contents.split(' ')
+    else:
+        words = list(contents)
 
     # tagword is the chinese word after beging taged,
     # i.e. "上海" -> "上 CN B" "海 CN E"
@@ -19,11 +25,14 @@ def tag(training, tagfile):
         if len(word) == 0:
             continue
         elif len(word) == 1:
-            if word in punc:
-                category = ' PUNC'
+            if word == u'\n':
+                tagword = u'\n'
+            elif word == u' ':
+                continue
+            elif word in punc:
+                tagword = word + ' PUNC' + ' S' + u'\n'
             else:
-                category = ' CN'
-            tagword = word + category + ' S' + u'\n'
+                tagword = word + ' CN' + ' S' + u'\n'
         elif len(word) == 2:
             tagword = word[0] + ' CN' + ' B' + u'\n' + word[1]+ ' CN' + ' E' + u'\n'
         else:
