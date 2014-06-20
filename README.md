@@ -48,11 +48,23 @@ python score_test.py
 3. 标注文件转化为分词结果 (Get segmentation)
 4. 评测 (F1 score of result)
 
-**Tools & Data**
+**分词效果**
+
+召回率 0.972，准确率 0.942，f值 0.956。 see score-info.txt
+
+```
+=== TOTAL TRUE WORD COUNT:	104372
+=== TOTAL TEST WORD COUNT:	102545
+=== TOTAL TRUE WORDS RECALL:	0.972
+=== TOTAL TEST WORDS PRECISION:	0.942
+=== F MEASURE:	0.956
+```
+
+**Tools and Data**
 
 [CRF++][link1]
 
-[data sets & scoring script][link2]
+[Data sets & Scoring script][link2]
 
 [link1]:http://crfpp.googlecode.com/svn/trunk/doc/index.html
 
