@@ -27,7 +27,7 @@ import os
 # NUM is the number of threads.
 
 def crf_exec():
-    cmd_learn = 'crf_learn -f 3 -c 1.5 -p 32 template pku_training.utf8.data model > train-info.txt'
+    cmd_learn = 'crf_learn -c 4.5 -p 64 template pku_training.utf8.data model > train-info.txt'
     cmd_test = 'crf_test -m model pku_test.utf8.data > test-info.txt'
     os.system(cmd_learn)
     os.system(cmd_test)
