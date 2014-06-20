@@ -9,8 +9,8 @@ def seg(testfile, segfile):
     words = ''
 
     for line in f:
-        if line == u'\r\n':
-            seglist.append(u'\r\n')
+        if line == u'\r\n' or line == u'\n':
+            seglist.append(u'\n')
         else:
             # remove spaces on the right
             word = line.rstrip().split(u'\t')[0]
@@ -45,14 +45,14 @@ def seg(testfile, segfile):
     f.close
 
     f = codecs.open(segfile, 'w', 'utf-8')
-    f.write(' '.join(seglist))
+    f.write('  '.join(seglist))
     f.close
 	
-    # remove space on the left side of the line
+    # remove space
     f = codecs.open(segfile, 'r', 'utf-8')
     get = []
     for line in f:
-        get.append(line[:-2].lstrip() + line[-2: -1])
+        get.append(line[:-1].strip() + u'\n')
     f.close
     f = codecs.open(segfile, 'w', 'utf-8')
     f.write(''.join(get))
