@@ -50,14 +50,18 @@ python score_test.py
 
 **分词效果**
 
-召回率 0.972，准确率 0.942，f值 0.956。 see score-info.txt.
+召回率 0.974
+准确率 0.946
+F值 0.960 
+
+see score-info.txt.
 
 ```
 === TOTAL TRUE WORD COUNT:	104372
-=== TOTAL TEST WORD COUNT:	102566
-=== TOTAL TRUE WORDS RECALL:	0.973
+=== TOTAL TEST WORD COUNT:	102698
+=== TOTAL TRUE WORDS RECALL:	0.974
 === TOTAL TEST WORDS PRECISION:	0.946
-=== F MEASURE:	0.959
+=== F MEASURE:	0.960
 ```
 
 **Tools and Data**
