@@ -25,9 +25,9 @@ CRF++ （Yet Another CRF toolkit）是一个实现 CRF 的开源工具包，主�
 
 **准备数据（data）**
 
-* pku_training.utf8: 训练数据
-* pku_test.utf8: 测试数据
-* pku_test_gold.utf8: 对比数据
+* pku_training.utf8  训练数据
+* pku_test.utf8  测试数据
+* pku_test_gold.utf8  对比数据
 
 **WordSeg 工作流程**
 
@@ -50,21 +50,21 @@ python score_test.py
 
 **分词效果**
 
-召回率 0.972，准确率 0.942，f值 0.956。 see score-info.txt
+召回率 0.972，准确率 0.942，f值 0.956。 see score-info.txt.
 
 ```
 === TOTAL TRUE WORD COUNT:	104372
-=== TOTAL TEST WORD COUNT:	102545
-=== TOTAL TRUE WORDS RECALL:	0.972
-=== TOTAL TEST WORDS PRECISION:	0.942
-=== F MEASURE:	0.956
+=== TOTAL TEST WORD COUNT:	102566
+=== TOTAL TRUE WORDS RECALL:	0.973
+=== TOTAL TEST WORDS PRECISION:	0.946
+=== F MEASURE:	0.959
 ```
 
 **Tools and Data**
 
 [CRF++][link1]
 
-[Data sets & Scoring script][link2]
+[Data sets and Scoring script][link2]
 
 [link1]:http://crfpp.googlecode.com/svn/trunk/doc/index.html
 
