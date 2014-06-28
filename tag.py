@@ -7,7 +7,7 @@ def tag(origin, tagfile):
     f = codecs.open(origin, 'r', 'utf-8')
     contents = f.read()
     contents = contents.replace(u'\r',u'')
-    contents = contents.replace(u'\n',u'\n ')
+    contents = contents.replace(u'\n',u' \n ')
 
     # if origin is a training file, then split the word
     # by space. If origin is a test file, transform it into
@@ -48,7 +48,7 @@ def tag(origin, tagfile):
 
 def cat(word):
     
-    punc = [u'，', u'、', u'：',  u'。', u'！', u'（', u'）', u'《', u'》', u'-', u'-', u'%', u'*', u'/', u'.', u'°']
+    punc = [u'，', u',', u'"', u'“', u'”', u'、', u'：',  u'。', u'！', u'？', u'（', u'）', u'：', u'《', u'》', u'-', u'-', u'%', u'*', u'/', u'.', u'°']
     num = [u'1', u'2', u'3', u'4', u'5', u'6', u'7', u'8', u'9', u'0',
            u'一', u'二', u'三', u'四', u'五', u'六', u'七', u'八', u'九', u'○' ,u'零', u'个', u'十', u'百', u'千', u'万', u'亿']
     time = [u'年', u'月', u'日', u'时', u'分', u'秒']
